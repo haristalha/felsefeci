@@ -1,0 +1,318 @@
+CRITICAL - 2024-12-18 20:20:31 --> Cannot redeclare Config\Database::$default
+in APPPATH\Config\Database.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-18 20:21:05 --> Cannot redeclare Config\Database::$default
+in APPPATH\Config\Database.php on line 59.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-18 20:21:39 --> Class "App\Controllers\DenemeModel" not found
+in APPPATH\Controllers\IndexController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:23:04 --> Class "App\Controllers\DenemeModel" not found
+in APPPATH\Controllers\IndexController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-18 20:24:07 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#9 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-12-18 20:24:07 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `denemeler`
+ORDER BY `tarih` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-18 20:24:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#9 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-12-18 20:24:37 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `denemeler`
+ORDER BY `tarih` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-18 20:24:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#9 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-12-18 20:24:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `denemeler`
+ORDER BY `tarih` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:26:50 --> default is not a valid database connection group.
+in SYSTEMPATH\Database\Config.php on line 65.
+ 1 SYSTEMPATH\Model.php(136): CodeIgniter\Database\Config::connect('default')
+ 2 APPPATH\Controllers\IndexController.php(19): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:27:29 --> Undefined property: Config\Database::$defaultGroup
+in SYSTEMPATH\Database\Config.php on line 61.
+ 1 SYSTEMPATH\Database\Config.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Database::$defaultGroup', 'SYSTEMPATH\\Database\\Config.php', 61)
+ 2 SYSTEMPATH\Model.php(136): CodeIgniter\Database\Config::connect(null)
+ 3 APPPATH\Controllers\IndexController.php(19): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:27:46 --> default is not a valid database connection group.
+in SYSTEMPATH\Database\Config.php on line 65.
+ 1 SYSTEMPATH\Model.php(136): CodeIgniter\Database\Config::connect('default')
+ 2 APPPATH\Controllers\IndexController.php(19): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:28:29 --> syntax error, unexpected token "=>", expecting "]"
+in APPPATH\Config\Database.php on line 42.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(249): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(69): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(65): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(714): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(709): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::toolbar()
+11 APPPATH\Config\Events.php(46): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+13 SYSTEMPATH\CodeIgniter.php(317): CodeIgniter\Events\Events::trigger('pre_system')
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:29:07 --> Cannot redeclare Config\Database::$denemeler
+in APPPATH\Config\Database.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-18 20:29:39 --> Undefined property: Config\Database::$defaultGroup
+in SYSTEMPATH\Database\Config.php on line 61.
+ 1 SYSTEMPATH\Database\Config.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Database::$defaultGroup', 'SYSTEMPATH\\Database\\Config.php', 61)
+ 2 SYSTEMPATH\Model.php(136): CodeIgniter\Database\Config::connect(null)
+ 3 APPPATH\Controllers\IndexController.php(19): CodeIgniter\Model->__construct()
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:29:49 --> default is not a valid database connection group.
+in SYSTEMPATH\Database\Config.php on line 65.
+ 1 SYSTEMPATH\Model.php(136): CodeIgniter\Database\Config::connect('default')
+ 2 APPPATH\Controllers\IndexController.php(19): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:31:22 --> Invalid file: denemeler.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('denemeler.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('denemeler', [], true)
+ 3 APPPATH\Controllers\IndexController.php(22): view('denemeler', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:31:37 --> Invalid file: denemeler.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('denemeler.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('denemeler', [], true)
+ 3 APPPATH\Controllers\IndexController.php(22): view('denemeler', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-12-18 20:33:43 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'default_database' in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'default_databas...', 3306, '', 0)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#9 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'default_database' in C:\xampp\htdocs\felsefecin\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\felsefecin\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\felsefecin\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\felsefecin\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\felsefecin\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\felsefecin\app\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(898): App\Controllers\IndexController->index()
+#7 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+#8 C:\xampp\htdocs\felsefecin\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\felsefecin\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-12-18 20:33:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'default_database'
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `denemeler`
+ORDER BY `tarih` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\IndexController.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:34:24 --> Invalid file: denemeler.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('denemeler.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('denemeler', [], true)
+ 3 APPPATH\Controllers\IndexController.php(22): view('denemeler', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:36:55 --> Undefined variable $baslik
+in APPPATH\Views\denemeler.php on line 7.
+ 1 APPPATH\Views\denemeler.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baslik', 'APPPATH\\Views\\denemeler.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\denemeler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('denemeler', [], true)
+ 5 APPPATH\Controllers\IndexController.php(22): view('denemeler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:37:45 --> Undefined variable $baslik
+in APPPATH\Views\denemeler.php on line 92.
+ 1 APPPATH\Views\denemeler.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baslik', 'APPPATH\\Views\\denemeler.php', 92)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\denemeler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('denemeler', [], true)
+ 5 APPPATH\Controllers\IndexController.php(22): view('denemeler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:38:03 --> Undefined variable $icerik
+in APPPATH\Views\denemeler.php on line 95.
+ 1 APPPATH\Views\denemeler.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $icerik', 'APPPATH\\Views\\denemeler.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\denemeler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('denemeler', [], true)
+ 5 APPPATH\Controllers\IndexController.php(22): view('denemeler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-12-18 20:38:57 --> Undefined variable $icerik
+in APPPATH\Views\denemeler.php on line 95.
+ 1 APPPATH\Views\denemeler.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $icerik', 'APPPATH\\Views\\denemeler.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\denemeler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('denemeler', [], true)
+ 5 APPPATH\Controllers\IndexController.php(22): view('denemeler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\IndexController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IndexController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
